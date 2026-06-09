@@ -1,0 +1,293 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrador - Sección de Videojuegos</title>
+    <link rel="stylesheet" href="stylesJ.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagenes/WhatsApp_Image_2026-06-09_at_1.45.34_PM-removebg-preview.png" alt="Logo" style="height: 80px; width: auto; vertical-align: middle; margin-right: 8px;">INFO<span>news</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Menu</a></li>
+                <li><a href="#peliculas">Películas</a></li>
+                <li><a href="#juegos">Videojuegos</a></li>
+                <li><a href="#tienda" class="btn-tienda">Tienda Virtual</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <audio id="musica-retro" src="imagenes/Bubblaine - Super Mario Odyssey OST.mp3" loop></audio>
+
+    <button id="boton-musica" class="boton-audio-flotante">
+        <span class="icono-audio">🔇</span> MÚSICA: OFF
+    </button>
+
+    
+
+    <div class="banner-inicial-estatico">
+        <div class="contenido-banner">
+            <h1>BIENVENIDO A LA <span class="texto-amarillo">INDIE ZONE</span></h1>
+            <p>Explora los juegos que sí están hechos con cariño y valen la pena mil veces más que otros títulos Triple A</p>
+        </div>
+    </div>
+
+    <section class="seccion-carrusel">
+        <div class="contenedor-interno">
+            <h2 class="titulo-seccion-oscura">Las novedades</h2>
+            
+            <div class="ventana-carrusel">
+                <div class="carrusel-deslizable">
+                    
+                    <div class="slide-nativo">
+                        <img src="imagenes/Cult.jpg" alt="Cult of the Lamb">
+                        <div class="subtitulo-bloque-juego">
+                            <h3>Cult of the Lamb</h3>
+                            <p>Entra en la piel de un cordero que murió y debe crear la secta más grande jamás vista.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide-nativo">
+                        <img src="imagenes/Deltarune.jpg" alt="Deltarune">
+                        <div class="subtitulo-bloque-juego">
+                            <h3>Deltarune</h3>
+                            <p>Acompaña a Kris y Susie en una increíble aventura creada por Toby Fox.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide-nativo">
+                        <img src="imagenes/Mewgenics.jpg" alt="Mewgenics">
+                        <div class="subtitulo-bloque-juego">
+                            <h3>Mewgenics</h3>
+                            <p>Miau. El caótico simulador de gatos de Edmund McMillen.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="seccion-destacados">
+        
+        <div class="bloque-destacado juego-hollow">
+            <div class="contenedor-interno contenedor-destacado">
+                <div class="columna-imagen-destacada">
+                    <img src="imagenes/writing-book.gif" alt="Hollow Knight"> </div>
+                <div class="columna-texto-destacado">
+                    <span class="etiqueta-genero">Metroidvania</span>
+                    <h2>Hollow Knight</h2>
+                    <p>Desciende a las entrañas de un reino de insectos en ruinas. Explora cavernas serpenteantes, lucha contra criaturas contaminadas y entabla amistad con extraños bichos, todo bajo un diseño mas que adorable y termina venciando a un Dios y una dificultad no apta para todos</p>
+                    <a href="#" class="boton-juego-destacado">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloque-destacado juego-celeste">
+            <div class="contenedor-interno contenedor-destacado">
+                <div class="columna-imagen-destacada">
+                    <img src="imagenes/hug-hugs.gif" alt="Celeste"> </div>
+                <div class="columna-texto-destacado">
+                    <span class="etiqueta-genero">Plataformas / Pixel Art</span>
+                    <h2>Celeste</h2>
+                    <p>Ayuda a Madeline en su viaje hacia la cima de la montaña Celeste. Un juego de plataformas súper preciso y desafiante con una narrativa profunda sobre la depresion y salud mental que te va a conmover</p>
+                    <a href="#" class="boton-juego-destacado">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloque-destacado juego-deadcells">
+            <div class="contenedor-interno contenedor-destacado">
+                <div class="columna-imagen-destacada">
+                    <img src="imagenes/scary-at-the-end.gif" alt="Dead Cells"> </div>
+                <div class="columna-texto-destacado">
+                    <span class="etiqueta-genero">Terror / Mascot horror</span>
+                    <h2>FNAF Sister Location</h2>
+                    <p>Adientrate en una nueva pizzeria con mecanicas no vistas en la saga hasta ahora con un monton de lore respecto a fnaf , entra en la piel de Michael y rescata a tu hermana o intentalo y muere en el proceso.</p>
+                    <a href="#" class="boton-juego-destacado">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloque-destacado juego-hades">
+            <div class="contenedor-interno contenedor-destacado">
+                <div class="columna-imagen-destacada">
+                    <img src="imagenes/cuphead-jig.gif" alt="Hades"> </div>
+                <div class="columna-texto-destacado">
+                    <span class="etiqueta-genero">Run and gun</span>
+                    <h2>Cuphead</h2>
+                    <p>Vence al Diablo en su propio juego , mientras intentas recuperar tu alma y derrotas a deudores del diablo haciendote cada vez mas fuerte y derrotalo , juego desafiante y divertido con un arte hecho a mano precioso y no tendras que hipotecar tu casa para jugarlo.</p>
+                    <a href="#" class="boton-juego-destacado">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="bloque-columna columna-amarilla">
+        <div class="contenedor-interno">
+            <h2 class="titulo-seccion">Catálogo Completo</h2>
+            
+            <div class="contenedor-rejilla">
+                
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/pixel-toy-car.gif');">
+                        <span class="badge-categoria">Reciente</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>Deltarune capitulo 5</h3>
+                        <p>El aclamado titulo de Toby Fox que tras la reciente polemica con su fandom latino tienen todo el derecho a descargarlo pirata y como siempre la comunidad le sacara doblaje , muy pronto esperelo.</p>
+                        <a href="#" class="boton-juego"><span>Entrar al dark world</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/cult-of-the-lamb.gif');">
+                        <span class="badge-categoria">roguelike</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>Cult of the Lamb</h3>
+                        <p>Un cordero que estava destinado a morir es salvado y debe derrotar a los otros Dioses con el poder de la secta que el mismo hara que crezca administrandola con todo tipo de locuras.</p>
+                        <a href="#" class="boton-juego"><span>Iniciar Secta</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/mewgenics-cat.gif');">
+                        <span class="badge-categoria">Miau</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>MewGenics</h3>
+                        <p>El ultimo gran proyecto de Edmun, un simulador de crianza de gatos con toques de RPG donde viajas en el tiempo y espacio derrotanto toda clase de monstruos con tu gran ejercito felino.</p>
+                        <a href="#" class="boton-juego"><span>Adoptar gato</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/hologram-hologram-balatro.gif');">
+                        <span class="badge-categoria">Apuesta</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>Balatro</h3>
+                        <p>Balatro Balatrez esta jugando Balatro, simulador de poker pero no uno cualquiera cada partida es distitna a la anterior unete a Jimbo descubre los comodines mas locos y divertidos y idea tu estrategia para pasartelo como 1000 veces.</p>
+                        <a href="#" class="boton-juego"><span>Soportar Miedo</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/the-binding-of-isaac-isaac.gif');">
+                        <span class="badge-categoria">Religioso</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>The bindding of Issac</h3>
+                        <p>Porque se la cromamos a Edmun , juegas este divertido roguelike con toques de shoter y Accion , sigue a issac mientras muere en una aventura donde puedes acabar tan roto que tu PC explotara y descubre quien es Issac realmente.</p>
+                        <a href="#" class="boton-juego"><span>Iniciar Viaje</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/little-nightmares-ii.gif');">
+                        <span class="badge-categoria">terror</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>Little Nightmares 2</h3>
+                        <p>Acompaña a Mono y a Six en una aventura tetrica en un mundo donde los adultos son monstruos canibales mientras eres perseguido por una entidad larga y alta ,con un gran giro final.</p>
+                        <a href="#" class="boton-juego"><span>Insertar Moneda</span></a>
+                    </div>
+                </article>
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/stardew-valley-laughing.gif');">
+                        <span class="badge-categoria">Cultiva</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>Stardew Valley</h3>
+                        <p>El mejor simulador de vida y granjas que pueda existir, que sus graficos en pixelart no te engañen es un juego mucho mas que completo que una vez empiezas no podras dejarlo hasta tener la vida perfecta que jamas tendras realmente.</p>
+                        <a href="#" class="boton-juego"><span>Soportar Miedo</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/minecraft.gif');">
+                        <span class="badge-categoria">Crea</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>Minecraft</h3>
+                        <p>No tenerlo seria simplemente un Crimen, el juego revolucionario el Sandbox por excelencia con mas mods que focas en el mundo que puedo decir de este juego ? si no lo has jgado simplemente no sabes nada de juegos.</p>
+                        <a href="#" class="boton-juego"><span>Iniciar Viaje</span></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-juego">
+                    <div class="imagen-simulada" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('imagenes/niko-one-shot.gif');">
+                        <span class="badge-categoria">Reflexion</span>
+                    </div>
+                    <div class="informacion-juego">
+                        <h3>OneShot</h3>
+                        <p>Un juego que te hace cuestionar que es lo que nos diferencia de una IA que es lo que nos mantiene vivos y que hace que podamos sentir , sigue a niko en una aventura llena de reflexion y descubrimiento y al final toma tu desicion.</p>
+                        <a href="#" class="boton-juego"><span>Insertar Moneda</span></a>
+                    </div>
+                </article>
+                
+
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>INFO<span>news</span></h3>
+                <p class="footer-quote">"Donde los píxeles cobran vida y las leyendas paceñas se escriben con un joystick."</p>
+                <p class="footer-location">Desde La Paz, Bolivia 🇧🇴</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#juegos">Videojuegos</a></li>
+                    <li><a href="#tienda">Tienda</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Comunidad</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank">Discord</a>
+                    <a href="#" target="_blank">TikTok</a>
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Info News - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+<script>
+        const musica = document.getElementById('musica-retro');
+        const boton = document.getElementById('boton-musica');
+        const icono = boton.querySelector('.icono-audio');
+
+        boton.addEventListener('click', () => {
+            if (musica.paused) {
+                musica.play();
+                boton.classList.add('activo');
+                boton.innerHTML = '<span class="icono-audio">🔊</span> MÚSICA: ON';
+            } else {
+                musica.pause();
+                boton.classList.remove('activo');
+                boton.innerHTML = '<span class="icono-audio">🔇</span> MÚSICA: OFF';
+            }
+        });
+    </script>
+</body>
+</html>

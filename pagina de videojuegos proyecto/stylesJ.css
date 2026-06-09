@@ -1,0 +1,719 @@
+:root {
+    --naranja-fondo: #ff6600;
+    --amarillo-fondo: #ffcc00;
+    --oscuro-tarjeta: #121214;
+    --oscuro-carrusel: #1a1a1e;
+    --texto-claro: #ffffff;
+    --texto-atenuado: #a0a0a5;
+    --gris-imagen: #25252b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--oscuro-tarjeta);
+    overflow-x: hidden; 
+}
+
+/* ==========================================
+   BANNER INICIAL ESTÁTICO (CON FONDO ADAPTABLE)
+   ========================================== */
+.banner-inicial-estatico {
+    
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d477e123-2663-4944-bc38-0b919617bbb0/d6toae7-14fda379-dd61-4e9d-8260-fdba89bab91d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9kNDc3ZTEyMy0yNjYzLTQ5NDQtYmMzOC0wYjkxOTYxN2JiYjAvZDZ0b2FlNy0xNGZkYTM3OS1kZDYxLTRlOWQtODI2MC1mZGJhODliYWI5MWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zzdoFfX5n1AnLLi2AA7DD2YcLd93X8l8p1R3ehXd-kM');
+    background-color: var(--naranja-fondo);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contenido-banner h1 {
+    font-size: 2.2rem; 
+    font-weight: 900;
+    color: var(--oscuro-tarjeta);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.contenido-banner .texto-amarillo {
+    color: var(--texto-claro);
+    text-shadow: 2px 2px 0px var(--oscuro-tarjeta);
+}
+
+.contenido-banner p {
+    font-size: 1rem;
+    color: var(--texto-claro);
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   CARRUSEL RESPONSIVO (ANIMADO)
+   ========================================== */
+.seccion-carrusel {
+    
+    background-image: url('https://wallpapers.com/images/hd/video-games-zoom-background-ux0skf8nbnx9xzen.jpg'); 
+    background-color: var(--oscuro-tarjeta);
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    background-position: center;
+    padding: 40px 15px;
+}
+
+.titulo-seccion-oscura {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--amarillo-fondo);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.ventana-carrusel {
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    
+}
+
+.carrusel-deslizable {
+    display: flex;
+    width: 300%; 
+    animation: cambioDeSlide 12s infinite ease-in-out;
+}
+
+.slide-nativo {
+    width: 100%;
+    background-color: var(--oscuro-carrusel);
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-nativo img {
+    width: 100%;
+    
+    height: 380px; 
+    
+    object-fit: cover; 
+    display: block;
+}
+
+.subtitulo-bloque-juego {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--oscuro-carrusel);
+    border-top: 3px solid var(--naranja-fondo);
+    
+    width: 100%; 
+}
+
+.subtitulo-bloque-juego h3 {
+    color: var(--amarillo-fondo);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.subtitulo-bloque-juego p {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+@keyframes cambioDeSlide {
+    0%, 25% { transform: translateX(0); }
+    33%, 58% { transform: translateX(-33.3333%); }
+    66%, 91% { transform: translateX(-66.6666%); }
+    100% { transform: translateX(0); }
+}
+
+/* ==========================================
+   SECCIÓN CATÁLOGO (CON SOPORTE DE IMAGEN DE FONDO)
+   ========================================== */
+.bloque-columna {
+    padding: 50px 15px;
+    width: 100%;
+}
+
+.columna-amarilla {
+    
+    background-image: linear-gradient(rgba(255,204,0,0.85), rgba(255,204,0,0.85)), url('https://i.pinimg.com/736x/15/9b/49/159b49b93a2c3f5481f1ab43d4c6f82d.jpg'); 
+    background-color: var(--amarillo-fondo);
+    background-size: cover;
+    padding: 50px 15px;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.contenedor-interno {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--oscuro-tarjeta);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* =========================================================
+   REJILLA PREMIUM DE 3 COLUMNAS Y EFECTOS GAMER AVANZADOS
+   ========================================================= */
+.contenedor-rejilla {
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px; 
+    padding: 10px 0;
+}
+
+
+.tarjeta-juego {
+    background-color: var(--oscuro-tarjeta);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+}
+
+
+.tarjeta-juego:hover {
+    transform: translateY(-14px) scale(1.02); 
+    border-color: var(--naranja-fondo); 
+    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 
+                0 0 25px rgba(255, 102, 0, 0.25); 
+}
+
+
+.imagen-simulada {
+    height: 230px; 
+    background-color: var(--gris-imagen);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: block; 
+}
+
+
+.imagen-simulada::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1;
+}
+
+.tarjeta-juego:hover .imagen-simulada::before {
+    transform: scale(1.08); 
+}
+
+
+.badge-categoria {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    background-color: rgba(18, 18, 20, 0.85);
+    color: var(--amarillo-fondo);
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 1px solid var(--amarillo-fondo);
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px); 
+}
+
+
+.informacion-juego {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
+    z-index: 2;
+}
+
+.informacion-juego h3 {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--texto-claro);
+    letter-spacing: -0.5px;
+}
+
+.informacion-juego p {
+    color: var(--texto-atenuado);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+
+.boton-juego {
+    margin-top: auto; 
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: transparent;
+    border: 2px solid var(--amarillo-fondo);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.boton-juego span {
+    color: var(--amarillo-fondo);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 3;
+    transition: color 0.3s ease;
+}
+
+
+.boton-juego::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background-color: var(--amarillo-fondo);
+    transition: left 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1;
+}
+
+.boton-juego:hover::after {
+    left: 0; 
+}
+
+.boton-juego:hover span {
+    color: var(--oscuro-tarjeta); 
+}
+
+
+@media (max-width: 1100px) {
+    .contenedor-rejilla {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+/* ==========================================
+   BOTÓN DE AUDIO ESTILO INTERFAZ DE JUEGO (HUD)
+   ========================================== */
+.boton-audio-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    
+    z-index: 20000; 
+    
+    background-color: var(--oscuro-carrusel);
+    color: var(--texto-claro);
+    border: 3px solid var(--naranja-fondo);
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 6px 0 var(--oscuro-tarjeta), 0 10px 20px rgba(0,0,0,0.4);
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.boton-audio-flotante:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 var(--oscuro-tarjeta), 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+.boton-audio-flotante.activo {
+    border-color: var(--amarillo-fondo);
+    color: var(--amarillo-fondo);
+    box-shadow: 0 6px 0 #b38f00, 0 10px 20px rgba(0,0,0,0.4);
+}
+/* ==========================================
+   ESTILOS DE LA SECCIÓN JUEGOS DESTACADOS (ZIG-ZAG)
+   ========================================== */
+.seccion-destacados {
+    width: 100%;
+    background-color: var(--oscuro-tarjeta);
+    display: block;
+}
+
+
+.bloque-destacado {
+    padding: 60px 20px; 
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    display: block;
+}
+
+
+.contenedor-destacado {
+    display: table; 
+    width: 100%;
+}
+
+.columna-imagen-destacada, 
+.columna-texto-destacado {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.columna-imagen-destacada img {
+    width: 100%;
+    max-height: 280px; 
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+
+.etiqueta-genero {
+    color: var(--amarillo-fondo);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.columna-texto-destacado h2 {
+    color: var(--texto-claro);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.columna-texto-destacado p {
+    color: var(--texto-atenuado);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.boton-juego-destacado {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--texto-claro);
+    background-color: var(--naranja-fondo);
+    padding: 10px 22px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 0 #b34700;
+    transition: all 0.1s ease;
+}
+
+.boton-juego-destacado:hover {
+    background-color: #ff8533;
+}
+
+.boton-juego-destacado:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #b34700;
+}
+
+/* ===================================================
+   ¡EL TRUCO DE MAGIA! ALTERNAR IMAGEN IZQUIERDA/DERECHA
+   =================================================== */
+
+@media (min-width: 768px) {
+    .bloque-destacado:nth-child(even) .columna-imagen-destacada {
+        float: right;
+    }
+    .bloque-destacado:nth-child(even) .columna-texto-destacado {
+        float: left;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .columna-imagen-destacada, 
+    .columna-texto-destacado {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* ===================================================
+   CÓMO PERSONALIZAR CADA FONDO DESDE AQUÍ (MUESTRAS)
+   =================================================== */
+
+.juego-hollow {
+    background-image: linear-gradient(rgba(18,18,20,0.8), rgba(18,18,20,0.8)), url('imagenes/hollow-knight-blue-butterflies-htthva79qwf3msbg.jpg');
+    
+}
+
+
+.juego-celeste {
+   background-image: linear-gradient(rgba(18,18,20,0.8), rgba(18,18,20,0.8)), url('imagenes/celeste-game-pink-scenery-92pm42i57f7plvka.jpg');
+}
+
+
+.juego-deadcells {
+    background-image: linear-gradient(rgba(18,18,20,0.8), rgba(18,18,20,0.8)), url('https://wallpapercave.com/wp/wp4735338.png');
+}
+
+
+.juego-hades {
+    background-image: linear-gradient(rgba(18,18,20,0.8), rgba(18,18,20,0.8)), url('imagenes/cuphead-with-mugman-in-yellow-4t0naapmm10pwqx0\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* ==========================================
+   ESTILOS DE LA BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0b0c; 
+    padding: 10px 30px;
+    border-bottom: 3px solid var(--naranja-fondo); 
+    position: sticky; 
+    top: 0;
+    z-index: 10000; 
+}
+
+
+.navbar .logo {
+    color: var(--texto-claro);
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar .logo span {
+    color: var(--amarillo-fondo);
+}
+
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: var(--texto-atenuado);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+
+.navbar nav ul li a:hover {
+    color: var(--amarillo-fondo);
+}
+
+
+.navbar nav ul li a.btn-tienda {
+    background-color: var(--naranja-fondo);
+    color: var(--texto-claro);
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 3px 0 #b34700;
+    transition: all 0.1s ease;
+}
+
+.navbar nav ul li a.btn-tienda:hover {
+    background-color: #ff8533;
+    color: var(--texto-claro);
+}
+
+.navbar nav ul li a.btn-tienda:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #b34700;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    .navbar nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* ==========================================
+   ESTILOS DEL PIE DE PÁGINA (MAIN FOOTER)
+   ========================================== */
+.main-footer {
+    background-color: #0b0b0c; 
+    color: var(--texto-claro);
+    padding: 50px 20px 20px 20px;
+    margin-top: 0; 
+    border-top: 3px solid var(--naranja-fondo); 
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-info h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+
+.footer-info h3 span {
+    color: var(--amarillo-fondo);
+}
+
+.footer-quote {
+    font-style: italic;
+    color: var(--texto-atenuated, #a0a0a5);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.footer-location {
+    font-size: 0.9rem;
+    color: #707075;
+    font-weight: 600;
+}
+
+
+.footer-links, .footer-social {
+    flex: 1;
+    min-width: 180px;
+}
+
+
+.footer-links h4, .footer-social h4 {
+    color: var(--naranja-fondo);
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: var(--texto-atenuado);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+
+.footer-links ul li a:hover {
+    color: var(--amarillo-fondo);
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: var(--texto-atenuado);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+.social-icons a:hover {
+    color: var(--amarillo-fondo);
+    transform: translateX(6px);
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1c1c21;
+    font-size: 0.85rem;
+    color: #55555a;
+}
