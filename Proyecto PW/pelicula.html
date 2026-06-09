@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFONEWS — Películas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+
+    <header class="navbar">
+        
+      <div class="logo">
+  
+        <img src="Galeria/logo3.png" alt="Logo" style="height: 80px; width: auto; vertical-align: middle; margin-right: 8px;">INFO<span>news</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#series">Series</a></li>
+          <li><a href="#peliculas" class="btn-tienda">Películas</a></li>
+          <li><a href="#juegos">Videojuegos</a></li>
+          <li><a href="#tienda" >Tienda Virtual</a></li>
+        </ul>
+      </nav>
+
+      <div class="contenedor-herramientas">
+        <div>
+          <select class="select-genero">
+            <option value="todos">Todos los géneros</option>
+            <option value="accion">Acción</option>
+            <option value="comedia">Comedia</option>
+            <option value="drama">Drama</option>
+            <option value="terror">Terror</option>
+            <option value="scifi">Ciencia Ficción</option>
+          </select>
+        </div>
+
+        <div class="search-box">
+          <input class="navbar-buscar" type="search" placeholder="Buscar películas...">
+          <button class="btn-buscar" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+    </header>
+
+    <header class="hero-banner">
+      <h1 class="hero-titulo">La guerra del mañana</h1>
+      <div class="hero-meta">
+        <span class="puntuacion">6.6/10</span>
+        <span>2h 18m</span>
+        <span>2021</span>
+      </div>
+      
+      <a href="guerra.html" class="btn-ver">▶ Ver Película</a>
+    </header>
+
+    <main class="seccion-cartelera">
+      <h2 class="titulo-seccion">Películas Online</h2>
+      
+      <div class="rejilla-peliculas">
+        
+        <a href="interestelar.html" class="tarjeta-pelicula-link" data-genero="scifi" data-titulo="interestelar">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/S/pv-target-images/4a38198dbdc5535e124d063718b6610e103f6965b7984b6377cceeb9e5fe8046.jpg" alt="Interestelar">
+              <span class="badge-anio">2014</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Interestelar</h3>
+              <div class="detalles-pelicula">
+                <span>2h 49m</span>
+                <span class="puntuacion">★ 8.7</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="michael.html" class="tarjeta-pelicula-link" data-genero="drama" data-titulo="michael jackson">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/M/MV5BYmMzNTNkOGYtYWViYy00ZmI2LWJjZDQtODhhNTA4NmRjNmE0XkEyXkFqcGc@._V1_.jpg" alt="Michael">
+              <span class="badge-anio">2026</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Michael Jackson</h3>
+              <div class="detalles-pelicula">
+                <span>2h 07m</span>
+                <span class="puntuacion">★ 7.2</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="pelicula3.html" class="tarjeta-pelicula-link" data-genero="accion" data-titulo="mortal kombat ii">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=500" alt="Mortal Kombat II">
+              <span class="badge-anio">2026</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Mortal Kombat II</h3>
+              <div class="detalles-pelicula">
+                <span>1h 50m</span>
+                <span class="puntuacion">★ 8.2</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="pelicula4.html" class="tarjeta-pelicula-link" data-genero="terror" data-titulo="la casa de la playa">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=500" alt="La casa de la playa">
+              <span class="badge-anio">2026</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">La casa de la playa</h3>
+              <div class="detalles-pelicula">
+                <span>1h 38m</span>
+                <span class="puntuacion">★ 6.1</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="guerra.html" class="tarjeta-pelicula-link" data-genero="accion" data-titulo="la guerra del mañana">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/M/MV5BYmUyNzY2YWYtNWQ0My00ODMwLTkwOTQtOTA0ZjM0MjRmYjJiXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="La guerra del mañana">
+              <span class="badge-anio">2021</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">La guerra del mañana</h3>
+              <div class="detalles-pelicula">
+                <span>2h 18m</span>
+                <span class="puntuacion">★ 6.6</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="avatar2.html" class="tarjeta-pelicula-link" data-genero="scifi" data-titulo="avatar el camino del agua">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://portalgeek.co/wp-content/uploads/2025/09/avatar-cam-agua.webp" alt="Avatar: El camino del agua">
+              <span class="badge-anio">2022</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Avatar: El camino del agua</h3>
+              <div class="detalles-pelicula">
+                <span>3h 12m</span>
+                <span class="puntuacion">★ 7.6</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="the-batman.html" class="tarjeta-pelicula-link" data-genero="accion" data-titulo="the batman">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg" alt="The Batman">
+              <span class="badge-anio">2022</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">The Batman</h3>
+              <div class="detalles-pelicula">
+                <span>2h 56m</span>
+                <span class="puntuacion">★ 7.8</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="spiderman-spiderverse.html" class="tarjeta-pelicula-link" data-genero="scifi" data-titulo="spider-man spider-verso">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/M/MV5BMjZmZTZmMjgtMzNjYS00MDE5LTljODAtZTg4YTg5NWI3MjMxXkEyXkFqcGc@._V1_.jpg" alt="Spider-Man: A través del Spider-Verso">
+              <span class="badge-anio">2023</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Spider-Man: Spider-Verso</h3>
+              <div class="detalles-pelicula">
+                <span>2h 20m</span>
+                <span class="puntuacion">★ 8.6</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="oppenheimer.html" class="tarjeta-pelicula-link" data-genero="drama" data-titulo="oppenheimer">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/M/MV5BNTFlZDI1YWQtMTVjNy00YWU1LTg2YjktMTlhYmRiYzQ3NTVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Oppenheimer">
+              <span class="badge-anio">2023</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Oppenheimer</h3>
+              <div class="detalles-pelicula">
+                <span>3h 00m</span>
+                <span class="puntuacion">★ 8.4</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="dune2.html" class="tarjeta-pelicula-link" data-genero="scifi" data-titulo="duna parte dos">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/M/MV5BNDUzNjRhMjEtOTNiNS00NDk0LTk1ZDgtN2MzM2MwZmJlOGEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Duna: Parte Dos">
+              <span class="badge-anio">2024</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Duna: Parte Dos</h3>
+              <div class="detalles-pelicula">
+                <span>2h 46m</span>
+                <span class="puntuacion">★ 8.6</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a href="top-gun-maverick.html" class="tarjeta-pelicula-link" data-genero="accion" data-titulo="top gun maverick">
+          <article class="tarjeta-pelicula">
+            <div class="poster-wrapper">
+              <img src="https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Top Gun: Maverick">
+              <span class="badge-anio">2022</span>
+            </div>
+            <div class="info-pelicula">
+              <h3 class="titulo-pelicula">Top Gun: Maverick</h3>
+              <div class="detalles-pelicula">
+                <span>2h 10m</span>
+                <span class="puntuacion">★ 8.3</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+      </div>
+    </main>
+
+    <footer class="main-footer">
+          <div class="footer-container">
+              <div class="footer-info">
+                  <h3>INFO<span>news</span></h3>
+                  <p class="footer-quote">"Donde los píxeles cobran vida y las leyendas paceñas se escriben con un joystick."</p>
+                  <p class="footer-location">Desde La Paz, Bolivia 🇧🇴</p>
+              </div>
+
+              <div class="footer-links">
+                  <h4>Navegación</h4>
+                  <ul>
+                      <li><a href="#series">Series</a></li>
+                      <li><a href="#peliculas">Películas</a></li>
+                      <li><a href="#juegos">Videojuegos</a></li>
+                      <li><a href="#tienda">Tienda</a></li>
+                  </ul>
+              </div>
+
+              <div class="footer-social">
+                  <h4>Comunidad</h4>
+                  <div class="social-icons">
+                      <a href="#" target="_blank">Discord</a>
+                      <a href="#" target="_blank">TikTok</a>
+                      <a href="#" target="_blank">YouTube</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="footer-bottom">
+              <p>&copy; 2026 Info News - Todos los derechos reservados.</p>
+          </div>
+      </footer>
+
+      <script>
+      const selectGenero = document.querySelector('.select-genero');
+      const inputBuscar = document.querySelector('.navbar-buscar');
+      const btnBuscar = document.querySelector('.btn-buscar');
+      const tarjetas = document.querySelectorAll('.tarjeta-pelicula-link');
+
+      function filtrarPeliculas() {
+        const generoSeleccionado = selectGenero.value;
+        const textoBusqueda = inputBuscar.value.toLowerCase().trim();
+
+        tarjetas.forEach(tarjeta => {
+          const generoTarjeta = tarjeta.getAttribute('data-genero');
+          const tituloTarjeta = tarjeta.getAttribute('data-titulo');
+
+          const coincideGenero = (generoSeleccionado === 'todos' || generoTarjeta === generoSeleccionado);
+          const coincideTexto = tituloTarjeta.includes(textoBusqueda);
+
+          if (coincideGenero && coincideTexto) {
+            tarjeta.style.display = 'block';
+          } else {
+            tarjeta.style.display = 'none';
+          }
+        });
+      }
+
+      selectGenero.addEventListener('change', filtrarPeliculas);
+      inputBuscar.addEventListener('input', filtrarPeliculas);
+      btnBuscar.addEventListener('click', filtrarPeliculas);
+    </script>
+</body>
+</html>
