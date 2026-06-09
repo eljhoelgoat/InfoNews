@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series y Animes Populares</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <img src="imagenes/Logo1.png"
+             alt="Logo"
+             style="height:80px;width:auto;vertical-align:middle;margin-right:8px;">
+        INFO<span>news</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Juegos</a></li>
+            <li><a href="#">Peliculas</a></li>
+            <li><a href="#" class="btn-tienda">Tienda Virtual</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>Series y Animes Más Populares</h1>
+
+        <p class="lead">
+            Descubre las series y animes mejor valorados del mundo.
+        </p>
+
+        <div class="col-md-6 mx-auto">
+            <input type="text"
+                   class="form-control form-control-lg"
+                   placeholder="Buscar serie o anime">
+        </div>
+
+    </div>
+
+</section>
+
+<div class="container my-5">
+
+    <h2 id="ranking" class="titulo-seccion">
+        🏆 Top Popularidad
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card tarjeta h-100">
+
+                <div class="contenedor-imagen">
+        <img src="imagenes/imagen1.jpg" alt="Breaking Bad">
+                </div>
+
+                <div class="card-body">
+                    <div class="ranking">#1</div>
+                    <h4>Breaking Bad</h4>
+                    <p>Drama criminal considerado una obra maestra.</p>
+                    <span class="badge bg-success">9.5/10</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card tarjeta h-100">
+
+                <div class="contenedor-imagen">
+                <img src="imagenes/imagen2.jpg" alt="Breaking Bad">
+                </div>
+
+                <div class="card-body">
+                    <div class="ranking">#2</div>
+                    <h4>Game of Thrones</h4>
+                    <p>Fantasía épica reconocida mundialmente.</p>
+                    <span class="badge bg-success">9.2/10</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card tarjeta h-100">
+
+                <div class="contenedor-imagen">
+                <img src="imagenes/imagen3.jpg" alt="Breaking Bad">
+                </div>
+
+                <div class="card-body">
+                    <div class="ranking">#3</div>
+                    <h4>Attack on Titan</h4>
+                    <p>Uno de los animes más exitosos de la historia.</p>
+                    <span class="badge bg-success">9.0/10</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <h2 id="series" class="titulo-seccion mt-5">
+        📺 Series Populares
+    </h2>
+
+    <div id="seriesCarousel"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="3000">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <div class="row g-4">
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen4.webp" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Stranger Things</h5>
+                    <p>Ciencia ficción y misterio.</p>
+                    <span class="badge bg-success">8.6/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen5.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>The Last of Us</h5>
+                    <p>Drama postapocalíptico.</p>
+                    <span class="badge bg-success">8.7/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen6.jpeg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>The Boys</h5>
+                    <p>Superhéroes diferentes.</p>
+                    <span class="badge bg-success">8.7/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen7.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Dark</h5>
+                    <p>Misterio y viajes temporales.</p>
+                    <span class="badge bg-success">8.7/10</span>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        
+        <div class="carousel-item">
+
+            <div class="row g-4">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen8.webp" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Peaky Blinders</h5>
+                    <p>Drama criminal británico.</p>
+                    <span class="badge bg-success">8.8/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen9.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Sherlock</h5>
+                    <p>Misterio y detectives.</p>
+                    <span class="badge bg-success">9.1/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen10.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>House of the Dragon</h5>
+                    <p>La precuela de Game of Thrones.</p>
+                    <span class="badge bg-success">8.4/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen11.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Prison Break</h5>
+                    <p>Suspenso y acción.</p>
+                    <span class="badge bg-success">8.3/10</span>
+                </div>
+            </div>
+        </div>
+                        </div>
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="row g-4">
+    
+            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen12.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Wednesday</h5>
+                    <p>Misterio y comedia oscura.</p>
+                    <span class="badge bg-success">8.0/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen13.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>The Walking Dead</h5>
+                    <p>Supervivencia en un mundo apocalíptico.</p>
+                    <span class="badge bg-success">8.1/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen14.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Breaking Bad</h5>
+                    <p>Drama criminal considerado legendario.</p>
+                    <span class="badge bg-success">9.5/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen15.avif" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Game of Thrones</h5>
+                    <p>Fantasía épica y política.</p>
+                    <span class="badge bg-success">9.2/10</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+</div>
+<div class="container my-5">
+         <h2 id="animes" class="titulo-seccion mt-5">
+        🔥 Animes Populares
+    </h2>
+
+    <div id="animeCarousel"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="3000">
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+
+    <div class="row g-4">
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen16.avif" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Naruto</h5>
+                    <p>El ninja más famoso del anime.</p>
+                    <span class="badge bg-success">8.4/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen17.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>One Piece</h5>
+                    <p>La aventura pirata más popular.</p>
+                    <span class="badge bg-success">8.9/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen18.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Demon Slayer</h5>
+                    <p>Acción y animación espectacular.</p>
+                    <span class="badge bg-success">8.7/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen19.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Death Note</h5>
+                    <p>Suspenso psicológico inolvidable.</p>
+                    <span class="badge bg-success">8.9/10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="carousel-item">
+
+    <div class="row g-4">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen20.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Attack on Titan</h5>
+                    <p>Uno de los animes más exitosos.</p>
+                    <span class="badge bg-success">9.0/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen21.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Dragon Ball Z</h5>
+                    <p>Un clásico de la animación japonesa.</p>
+                    <span class="badge bg-success">8.8/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen22.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Jujutsu Kaisen</h5>
+                    <p>Acción sobrenatural moderna.</p>
+                    <span class="badge bg-success">8.6/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen23.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Hunter x Hunter</h5>
+                    <p>Aventura y estrategia.</p>
+                    <span class="badge bg-success">9.0/10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="carousel-item">
+
+    <div class="row g-4">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen24.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Tokyo Ghoul</h5>
+                    <p>Acción y terror urbano.</p>
+                    <span class="badge bg-success">7.8/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen25.jpg" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Fullmetal Alchemist</h5>
+                    <p>Una obra maestra del anime.</p>
+                    <span class="badge bg-success">9.1/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen26.webp" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>My Hero Academia</h5>
+                    <p>Superhéroes y acción juvenil.</p>
+                    <span class="badge bg-success">7.9/10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card tarjeta h-100">
+                <div class="contenedor-imagen"><img src="imagenes/imagen27.png" alt="Breaking Bad"></div>
+                <div class="card-body">
+                    <h5>Bleach</h5>
+                    <p>Batallas épicas de shinigamis.</p>
+                    <span class="badge bg-success">8.2/10</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </div>
+
+</div>
+    </div>
+
+    
+</div>
+<div class="container my-5">
+
+    <h2 id="criticas" class="titulo-seccion mt-5">
+        ⭐ Críticas Destacadas
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card tarjeta-critica h-100">
+
+                <div class="card-body">
+
+                    <div class="estrellas">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h5>Breaking Bad</h5>
+
+                    <p>
+                        Considerada una de las mejores series jamás producidas.
+                        Su historia y personajes la convierten en una obra maestra.
+                    </p>
+
+                    <hr>
+
+                    <small>
+                        IMDb • 9.5/10
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card tarjeta-critica h-100">
+
+                <div class="card-body">
+
+                    <div class="estrellas">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h5>Attack on Titan</h5>
+
+                    <p>
+                        Un anime que revolucionó la industria moderna y dejó una huella imborrable.
+                    </p>
+
+                    <hr>
+
+                    <small>
+                        MyAnimeList • 9.0/10
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card tarjeta-critica h-100">
+
+                <div class="card-body">
+
+                    <div class="estrellas">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h5>One Piece</h5>
+
+                    <p>
+                        Una aventura legendaria que continúa conquistando generaciones de fanáticos.
+                    </p>
+
+                    <hr>
+
+                    <small>
+                        IMDb • 8.9/10
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="main-footer">
+        <div class="footer-container">
+            <!-- Sección 1: Frase de cierre y procedencia con el nombre correcto -->
+            <div class="footer-info">
+                <h3>INFO<span>news</span></h3>
+                <p class="footer-quote">"Donde los píxeles cobran vida y las leyendas paceñas se escriben con un joystick."</p>
+                <p class="footer-location">Desde La Paz, Bolivia 🇧🇴</p>
+            </div>
+
+            <!-- Sección 2: Enlaces rápidos de tu menú -->
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#juegos">Videojuegos</a></li>
+                    <li><a href="#tienda">Tienda</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección 3: Tus redes -->
+            <div class="footer-social">
+                <h4>Comunidad</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank">Discord</a>
+                    <a href="#" target="_blank">TikTok</a>
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea final de derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Info News - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
