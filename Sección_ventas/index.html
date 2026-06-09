@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Geek</title>
+
+    <link rel="stylesheet" href="hoja_de_estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <img src="WhatsApp_Image_2026-06-09_at_1.45.34_PM-removebg-preview.png"
+             alt="Logo"
+             style="height: 80px; width: auto; vertical-align: middle; margin-right: 8px;">
+        INFO<span>news</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#series">Series</a></li>
+            <li><a href="#peliculas">Películas</a></li>
+            <li><a href="#juegos">Videojuegos</a></li>
+            <li><a href="#tienda" class="btn-tienda">Tienda Virtual</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🛒 SOLO CARRO QUE QUIERES SALVAR -->
+    <button class="carrito" onclick="abrirCarrito()">
+        🛒 (<span id="contador">0</span>)
+    </button>
+
+    <div id="panelCarrito" class="panel-carrito">
+
+        <div class="cabecera-carrito">
+            <h2>CESTA</h2>
+            <span onclick="cerrarCarrito()">✖</span>
+        </div>
+
+        <div id="listaCarrito"></div>
+
+        <div class="resumen">
+            <h3>RESUMEN</h3>
+
+            <p>
+                Subtotal: Bs. <span id="subtotal">0</span>
+            </p>
+
+            <button class="btn-comprar" onclick="tramitarCompra()">
+                TRAMITAR COMPRA
+            </button>
+        </div>
+
+    </div>
+
+</header>
+
+</body>
+</html>
+    
+
+    <section class="filtros">
+       
+
+        
+    </section>
+    <h1 style="color:white">LO MÁS BUSCADO</h1>
+    <!-- CARRUSEL -->
+    <div class="container-fluid p-0">
+
+        <div id="carouselExampleFade"
+             class="carousel slide carousel-fade"
+             data-bs-ride="carousel"
+             data-bs-interval="3000">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="Productos/hogwarts.jpg"
+                         class="d-block w-100"
+                         alt="Harry Potter">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Productos/pokemon.jpg"
+                         class="d-block w-100"
+                         alt="Pokemon">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Productos/Midnight.webp"
+                         class="d-block w-100"
+                         alt="Midnight">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Productos/arcane.jpg"
+                         class="d-block w-100"
+                         alt="arcane">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <hr> 
+
+    <!-- PRODUCTOS -->
+    <section class="seccion">
+    
+    <!--Tarjeta grande-->
+    <div class="producto producto-grande" onclick="window.location.href='preventa1.html'">
+
+        <span class="etiqueta">
+            Preventa
+        </span>
+
+        <span class="favorito"
+            onclick="favorito(this)">
+            ♡
+        </span>
+
+        <img src="Productos/arcane.jpg"
+            alt="Arcane">
+
+        <h3>Edición Especial</h3>
+        
+    </div>
+     <!-- PRODUCTO 1 -->
+    
+<div class="producto videojuego"
+    onclick="window.location.href='verpag.html'">
+
+    <span class="etiqueta">Nuevo</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/hogwarts.jpg" alt="Hogwarts Legacy">
+
+    <h3>Bienvenido a Hogwarts colección</h3>
+
+    <p class="textogeneral">
+        Una colección que presenta todos los recuerdos de las películas en una entrega
+    </p>
+
+    <p class="precio">Bs. 250</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Bienvenido a Hogwarts colección',
+                250,
+                'Productos/hogwarts.jpg'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+            onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+
+    </div>
+</div>
+
+
+<div class="producto videojuego"
+    onclick="window.location.href='verpag2.html'">
+
+    <span class="etiqueta">Nuevo</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/chimuelo.jpg" alt="Chimuelo">
+
+    <h3>Peluche Chimuelo - Cómo entrenar a tu Dragón</h3>
+
+    <p class="textogeneral">
+        Peluche del icónico dragón Nocturno Furia Nocturna, ideal para fans de la saga.
+    </p>
+
+    <p class="precio">Bs. 250</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Peluche Chimuelo - Cómo entrenar a tu Dragón',
+                250,
+                'Productos/chimuelo.jpg'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+
+<div class="producto videojuego"
+    onclick="window.location.href='verpag3.html'">
+
+    <span class="etiqueta">Nuevo</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/colgante.jpg" alt="Arcane">
+
+    <h3>Collar Arcane</h3>
+
+    <p class="textogeneral">
+        Joyería inspirada en el universo de Piltover y Zaun de la serie Arcane.
+    </p>
+
+    <p class="precio">Bs. 250</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Collar Arcane',
+                250,
+                'Productos/colgante.jpg'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+
+<div class="producto videojuego"
+    onclick="window.location.href='verpag4.html'">
+
+    <span class="etiqueta">Edición especial</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/pokemon.jpg" alt="Pokemon">
+
+    <h3>Peluches Pokémon</h3>
+
+    <p class="textogeneral">
+        Colección de peluches inspirados en los Pokémon más populares de la saga.
+    </p>
+
+    <p class="precio">Bs. 180</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Peluches Pokémon',
+                180,
+                'Productos/pokemon.jpg'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+<div class="producto anime"
+    onclick="window.location.href='verpag5.html'">
+
+    <span class="etiqueta">Anime</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/Midnight.webp" alt="Midnight">
+
+    <h3>Midnight Libro</h3>
+
+    <p class="textogeneral">
+        Novela de fantasía oscura con una historia llena de misterio y magia.
+    </p>
+
+    <p class="precio">Bs. 320</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Midnight Libro',
+                320,
+                'Productos/Midnight.webp'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+<div class="producto pelicula"
+    onclick="window.location.href='verpag6.html'">
+
+    <span class="etiqueta">Oferta</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/varitas.webp" alt="Varitas de Hogwarts">
+
+    <h3>Varitas de Hogwarts</h3>
+
+    <p class="textogeneral">
+        Réplicas mágicas inspiradas en el universo de Harry Potter.
+    </p>
+
+    <p class="precio">Bs. 90</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Varitas de Hogwarts',
+                90,
+                'Productos/varitas.webp'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+<div class="producto videojuego"
+    onclick="window.location.href='verpag7.html'">
+
+    <span class="etiqueta">Nuevo</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/mochila 1.webp" alt="Mochila Arcane">
+
+    <h3>Mochila Arcane</h3>
+
+    <p class="textogeneral">
+        Mochila inspirada en el estilo urbano y futurista del universo Arcane.
+    </p>
+
+    <p class="precio">Bs. 250</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Mochila Arcane',
+                250,
+                'Productos/mochila 1.webp'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+<div class="producto videojuego"
+    onclick="window.location.href='verpag8.html'">
+
+    <span class="etiqueta">Nuevo</span>
+
+    <span class="favorito"
+          onclick="event.stopPropagation(); favorito(this)">
+        ♡
+    </span>
+
+    <img src="Productos/polera3.jpg" alt="Twilight">
+
+    <h3>Canguro Twilight</h3>
+
+    <p class="textogeneral">
+        Hoodie inspirada en la saga Twilight, ideal para fans del romance vampírico.
+    </p>
+
+    <p class="precio">Bs. 250</p>
+
+    <div class="acciones">
+        <button onclick="
+            event.stopPropagation();
+            agregarCarrito(
+                'Canguro Twilight',
+                250,
+                'Productos/polera3.jpg'
+            )">
+            🛒Comprar
+        </button>
+
+        <span class="favorito"
+              onclick="event.stopPropagation(); favorito(this)">
+            ♡
+        </span>
+    </div>
+</div>
+
+
+    
+     <!--Tarjeta grande-->
+    <div class="producto producto-grande" onclick="window.location.href='preventa1.html'">
+
+        <span class="etiqueta">
+            Preventa
+        </span>
+
+        <span class="favorito"
+            onclick="favorito(this)">
+            ♡
+        </span>
+
+        <img src="Productos/jurassic.jfif"
+            alt="Arcane">
+
+        <h3>Edición Especial</h3>
+        
+    </div>
+
+</section>
+
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+
+        <div class="contenido-modal">
+
+            <span class="cerrar" onclick="cerrarModal()">✖</span>
+
+            <h2 id="tituloModal"></h2>
+
+            <p id="precioModal"></p>
+
+            <p id="descripcionModal"></p>
+
+        </div>
+
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Sección 1: Frase de cierre y procedencia con el nombre correcto -->
+            <div class="footer-info">
+                <h3>INFO<span>news</span></h3>
+                <p class="footer-quote">"Donde los píxeles cobran vida y las leyendas paceñas se escriben con un joystick."</p>
+                <p class="footer-location">Desde La Paz, Bolivia 🇧🇴</p>
+            </div>
+
+            <!-- Sección 2: Enlaces rápidos de tu menú -->
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#juegos">Videojuegos</a></li>
+                    <li><a href="#tienda">Tienda</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección 3: Tus redes -->
+            <div class="footer-social">
+                <h4>Comunidad</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank">Discord</a>
+                    <a href="#" target="_blank">TikTok</a>
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea final de derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Info News - Todos los derechos reservados.</p>
+        </div>
+    </footer>    
+
+    <!-- Bootstrap JS (OBLIGATORIO PARA EL CARRUSEL) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="Mecanismo.js"></script>
+
+</body>
+
+
+</html>

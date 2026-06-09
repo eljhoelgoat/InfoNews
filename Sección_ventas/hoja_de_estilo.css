@@ -1,0 +1,665 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    height:100%;
+    min-height:100vh;
+    background:#000 !important;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+/* HEADER */
+header{
+    background:#9c1919;
+    color:white;
+    padding:20px;
+}
+
+/* BARRA */
+header h1{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.barra-superior{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#busqueda{
+    width:70%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+}
+
+.carrito{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* FILTROS */
+.filtros{
+    text-align:center;
+    margin:20px;
+    background:#000;
+}
+
+.filtros button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+    border:none;
+    border-radius:8px;
+    background:#d99228;
+    color:white;
+    transition:0.3s;
+}
+
+.filtros button:hover{
+    background:#ffae00;
+    transform:scale(1.05);
+}
+
+/* PRODUCTOS */
+.productos{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:20px;
+    background:#000;
+}
+
+
+.producto-grande{
+    grid-column: span 2;
+}
+
+.producto-grande img{
+    width:100%;
+    height:400px !important;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* seccion*/
+
+.seccion{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:20px;
+    background:#000;
+}
+
+.peli{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+    padding:20px;
+    background:#000;
+}
+
+/* TARJETAS */
+.producto{
+    background:#0d0d0d;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 15px #d8b723;
+    text-align:center;
+    position:relative;
+    color:white;
+    overflow:hidden;
+    border:1px solid transparent;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* EFECTO HOVER TARJETA */
+.producto:hover{
+    transform:translateY(-10px) scale(1.05);
+    
+}
+
+/* EFECTO BRILLO */
+.producto::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:50%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    transition:0.3s;
+}
+
+.producto:hover::before{
+    left:150%;
+}
+
+/* IMÁGENES */
+.producto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:transform 0.4s ease;
+}
+
+/* ZOOM DE IMAGEN */
+.producto:hover img{
+    transform:scale(1.08);
+}
+
+/* TEXTOS */
+.producto h3{
+    margin:10px 0;
+    color:white;
+}
+
+.producto p{
+    margin-bottom:10px;
+    color:#ddd;
+}
+
+/* PRECIO */
+.precio{
+    font-size:20px;
+    font-weight:bold;
+    color:#ffd700 !important;
+}
+
+.textogeneral{
+    font-size:15px;
+    color:white;
+}
+
+
+/* TEXTOS PELICULAS*/
+.producto h3{
+    margin:10px 0;
+    color:white;
+}
+
+.producto p{
+    margin-bottom:10px;
+    color:#ddd;
+}
+
+/* PRECIO PELICULAS*/
+.preciopeli{
+    font-size:14px;
+    font-weight:bold;
+    color:#ffd700 !important;
+}
+
+.textogeneral{
+    font-size:15px;
+    color:white;
+}
+
+/* BOTONES */
+.producto button{
+    padding:8px 12px;
+    margin:5px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#d4551b;
+    color:white;
+    transition:0.3s;
+}
+
+.producto button:hover{
+    background:#ff6a00;
+    transform:scale(1.08);
+}
+
+/* FAVORITO */
+.favorito{
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size:26px;
+    cursor:pointer;
+    z-index:10;
+    background:rgba(0,0,0,0.5);
+    padding:5px 8px;
+    border-radius:50%;
+    transition:0.3s;
+}
+
+.favorito:hover{
+    transform:scale(1.2);
+}
+
+.activo{
+    color:red;
+}
+
+/* ETIQUETAS */
+.etiqueta{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#ffae00;
+    color:black;
+    font-weight:bold;
+    padding:5px 10px;
+    border-radius:6px;
+    z-index:10;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:999;
+}
+
+.contenido-modal{
+    background:#111;
+    width:400px;
+    max-width:90%;
+    margin:100px auto;
+    padding:25px;
+    border-radius:10px;
+    color:white;
+    box-shadow:0 0 20px #ffd700;
+}
+
+.cerrar{
+    float:right;
+    cursor:pointer;
+    font-size:25px;
+}
+
+.cerrar:hover{
+    color:red;
+}
+
+/* CARRUSEL */
+.carousel{
+    width:100%;
+}
+
+.carousel-item img{
+    height:100vh;
+    object-fit:cover;
+}
+
+/* PARA EL BOTON */
+.btn-volver{
+    display:inline-block;
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+    border:none;
+    border-radius:8px;
+    background:#d99228;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn-volver:hover{
+    background:#ffae00;
+    color:white;
+    transform:scale(1.05);
+}
+
+/* PARA EL CARRITO */
+
+.panel-carrito{
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:400px;
+    height:100%;
+    background:orange;
+    color:black;
+    z-index:9999;
+    transition:0.4s;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.panel-carrito.activo{
+    right:0;
+}
+
+.cabecera-carrito{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.cabecera-carrito span{
+    cursor:pointer;
+    font-size:25px;
+}
+
+.item-carrito{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+}
+
+.item-carrito img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+}
+
+.resumen{
+    margin-top:30px;
+}
+
+.btn-comprar{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#e6002d;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.carrito{
+    background:#d99228;
+    border:none;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Corazón */
+.favorito{
+    cursor:pointer;
+    font-size:22px;
+}
+
+.favorito.activo{
+    color:red;
+}
+
+/* BOTON SUCCESS */
+.screenAlert-icon.screenAlert-success{border-color:#A5DC86}
+.screenAlert-icon.screenAlert-success:after,
+.screenAlert-icon.screenAlert-success:before{background-color:transparent!important;content:'';height:120px;position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);width:60px}
+.screenAlert-icon.screenAlert-success:before{border-radius:120px 0 0 120px;left:-33px;top:-7px;-webkit-transform-origin:60px 60px;transform-origin:60px 60px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.screenAlert-icon.screenAlert-success:after{border-radius:0 120px 120px 0;left:30px;top:-11px;-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.screenAlert-icon.screenAlert-success .screenAlert-placeholder{border-radius:50%;border:4px solid rgba(165,220,134,0.2);box-sizing:content-box;height:80px;left:-4px;position:absolute;top:-4px;width:80px;z-index:2}
+.screenAlert-icon.screenAlert-success .screenAlert-line{background-color:#A5DC86;border-radius:2px;display:block;height:5px;position:absolute;z-index:2}
+.screenAlert-icon.screenAlert-success .screenAlert-line.screenAlert-tip{left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);width:25px}
+.screenAlert-icon.screenAlert-success .screenAlert-line.screenAlert-long{right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);width:47px}
+.animateSuccessTip{-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}
+.animateSuccessLong{-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}
+/* ANIMATE SUCCESS */
+@-webkit-keyframes animateSuccessTip{0%,54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}100%{width:25px;left:14px;top:45px}}
+@keyframes animateSuccessTip{0%,54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}100%{width:25px;left:14px;top:45px}}
+@-webkit-keyframes animateSuccessLong{0%,65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}100%{width:47px;right:8px;top:38px}}
+@keyframes animateSuccessLong{0%,65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}100%{width:47px;right:8px;top:38px}}
+
+.main-footer {
+    background-color: #11141a; /* Un fondo oscuro elegante */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Columna de la info y frase */
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-info h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.footer-info h3 span {
+    color: #ff3333; /* El toque rojo distintivo de PlayRed */
+}
+
+.footer-quote {
+    font-style: italic;
+    color: #aaaaaa;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.footer-location {
+    font-size: 0.9rem;
+    color: #888888;
+}
+
+/* Columnas de enlaces y comunidad */
+.footer-links, .footer-social {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-links h4, .footer-social h4 {
+    color: #ff3333;
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+/* Enlaces de redes */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #ff3333;
+    transform: translateX(5px); /* Pequeño efecto de empuje al pasar el mouse */
+}
+
+/* Barra inferior de Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222831;
+    font-size: 0.85rem;
+    color: #666666;
+}
+.footer-info h3 span {
+    color: #ff3333; /* Esto pintará el "news" en rojo, dándole un toque genial */
+}
+
+/* BOTON SUCCESS */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0b0c; /* Un oscuro un poco más profundo para contrastar */
+    padding: 10px 30px;
+    border-bottom: 3px solid var(--naranja-fondo); /* Línea naranja divisoria estilo gamer */
+    position: sticky; /* Se queda fija arriba al bajar la pantalla (opcional) */
+    top: 0;
+    z-index: 10000; /* Asegura que esté por encima de los fondos del carrusel */
+}
+
+
+.navbar .logo {
+    color: var(--texto-claro);
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar .logo span {
+    color: var(--amarillo-fondo);
+}
+
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre pestañas */
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: var(--texto-atenuado);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+
+.navbar nav ul li a:hover {
+    color: var(--amarillo-fondo);
+}
+
+
+.navbar nav ul li a.btn-tienda {
+    background-color: var(--naranja-fondo);
+    color: var(--texto-claro);
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 3px 0 #b34700;
+    transition: all 0.1s ease;
+}
+
+.navbar nav ul li a.btn-tienda:hover {
+    background-color: #ff8533;
+    color: var(--texto-claro);
+}
+
+.navbar nav ul li a.btn-tienda:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #b34700;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    .navbar nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.btn-comprar {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* boton carrito */
+.carrito {
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* carrito boton */
+.carrito:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.carrito {
+    margin-right: 50px;
+}
+
+
+.btn-comprar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
